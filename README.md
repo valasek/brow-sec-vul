@@ -28,6 +28,7 @@ heroku create
 git push heroku main
 heroku run rake db:migrate
 heroku addons:create heroku-redis:hobby-dev -a pure-island-89826
+heroku ps:scale web=1
 
 
 * ...
