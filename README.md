@@ -24,6 +24,10 @@ First setup:
 https://devcenter.heroku.com/articles/getting-started-with-rails7
 rails db:system:change --to=postgresql
 bundle
+heroku create
+git push heroku main
+heroku run rake db:migrate
+heroku addons:create heroku-redis:hobby-dev -a pure-island-89826
 
 
 * ...
