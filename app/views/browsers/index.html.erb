@@ -1,0 +1,24 @@
+<div class="bg-slate-200 text-center py-6">
+    <h1 class="text-2xl">Browser security vulnerabilities</h1>
+    <p class="text-lg">per version</p>
+</div>
+
+<div class="py-6">
+    <% @browsers.each do |browser| %>
+        <div class="py-2">
+            <%= link_to browser.name, browser.home_page_url, class: "text-lg underline decoration-sky-500" %><br/>
+            <p><b>Version | Security</b></p>
+            <% browser.versions.each do |version| %>
+                <p><%= version.name %> graph</p>
+            <% end %>
+            <p class="text-sm">Last updated: <%= browser.updated %></p>
+        </div>
+    <% end %>
+</div>
+
+<hr  />
+
+<footer class="text-center py-6">
+    <p>Made with love by <a href="https://www.linkedin.com/in/stanislavvalasek/" class="underline decoration-sky-500">Stanislav Valasek</a><br/>
+    Get the <a href="https://github.com/valasek/brow-sec-vul" class="underline decoration-sky-500">source code</a></p>
+</footer>
